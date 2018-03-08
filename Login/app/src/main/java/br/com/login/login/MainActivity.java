@@ -1,5 +1,6 @@
 package br.com.login.login;
 
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,19 +45,20 @@ public class MainActivity extends AppCompatActivity {
         addDotsIndicator(0);
 
         pageOne.addOnPageChangeListener( viewList );
-        
+
     }
 
     public void addDotsIndicator(int position){
 
         mDots = new TextView[3];
+        linearLayout.removeAllViews();
 
         for (int i = 0; i<mDots.length; i++){
 
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226"));
             mDots[i].setTextSize(35);
-            mDots[i].setTextColor(getResources().getColor(R.color.colorTransparenteWhite));
+            mDots[i].setTextColor(getResources().getColor(R.color.colorTransparenteFalseWhite));
 
             linearLayout.addView( mDots[i] );
 
@@ -101,22 +105,49 @@ public class MainActivity extends AppCompatActivity {
                 btnNext.setText("Next");
                 btnBack.setText("");
 
-            }else if( position == mDots.length -1 ){
-
-                btnNext.setEnabled(true);
-                btnBack.setEnabled( true );
-                btnBack.setVisibility(View.VISIBLE );
-
-                btnNext.setText("Finish");
-                btnBack.setText("Back");
-
-            }else{
+            }else if( position == 1){
 
                 btnNext.setEnabled(true);
                 btnBack.setEnabled( true );
                 btnBack.setVisibility(View.VISIBLE );
 
                 btnNext.setText("Next");
+                btnBack.setText("Back");
+
+            }else if(position == 2){
+
+                btnNext.setEnabled(true);
+                btnBack.setEnabled( true );
+                btnBack.setVisibility(View.VISIBLE );
+
+                btnNext.setText("Finish");
+                /*
+                *  if(btnNext.getText().equals("Finish")){
+                    btnNext.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent i = new Intent(MainActivity.this, Teste.class);
+                            startActivity( i );
+                            finish();
+                        }
+                    });
+                }
+                *
+                * */
+
+                if(position >= 2){
+                    btnNext.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent i = new Intent(MainActivity.this, Teste.class);
+                            startActivity( i );
+                            finish();
+                        }
+                    });
+                }
+
+
+
                 btnBack.setText("Back");
 
             }
