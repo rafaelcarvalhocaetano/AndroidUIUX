@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/Group_10" />
+        app:srcCompat="@drawable/a10" />
 
     <TextView
         android:id="@+id/slider_heading"
@@ -24,7 +24,8 @@
         android:layout_below="@+id/slider_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp"
-        android:text="HEADING" />
+        android:text="HEADING"
+        android:textColor="@color/colorWhite"/>
 
     <TextView
         android:id="@+id/slider_desc"
@@ -38,6 +39,7 @@
         android:gravity="center"
         android:padding="35dp"
         android:text="Donec gravida sem non purus molestie eleifend. Nulla at ipsum ante. Maecenas vehicula at nulla nec elementum. Nam dictum molestie ultrices. Nulla id lectus eget mi fringilla blandit. Nunc vel lectus elementum, egestas tortor eu, blandit risus. Quisque efficitur hendrerit massa sit amet consectetur."
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"/>
 
 </RelativeLayout>

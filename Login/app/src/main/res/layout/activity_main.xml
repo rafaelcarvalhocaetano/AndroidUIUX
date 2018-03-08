@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.com.login.login.MainActivity"
-    android:background="@drawable/Background">
+    android:background="@drawable/background">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/sliderViewPager"
@@ -27,6 +27,29 @@
         android:id="@+id/linearLayout">
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/prev_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sliderViewPager"
+        android:background="@color/colorTransparenteWhite"
+        android:text="Back"
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorTransparenteWhite"
+        android:text="Next"
+        android:textColor="@color/colorWhite"/>
 
 
 </RelativeLayout>

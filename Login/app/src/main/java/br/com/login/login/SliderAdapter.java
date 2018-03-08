@@ -19,16 +19,16 @@ public class SliderAdapter extends PagerAdapter {
     LayoutInflater inflater;
 
 
-
     public SliderAdapter(Context c){
+
         this.context = c;
     }
 
     //array das imagens
     public int[] slider_image = {
-            R.drawable.Group_10,
-            R.drawable.Group_11,
-            R.drawable.Group_12
+            R.drawable.a10,
+            R.drawable.a11,
+            R.drawable.a12
     };
 
     //array de String dos title
@@ -61,7 +61,7 @@ public class SliderAdapter extends PagerAdapter {
         TextView sliderHeading = (TextView) view.findViewById(R.id.slider_heading);
         TextView sliderDesc = (TextView) view.findViewById(R.id.slider_desc);
 
-        //busca a posição no momento da renderização
+        //busca a posição
         sliderImageView.setImageResource(slider_image[position]);
         sliderHeading.setText(slider_header[position]);
         sliderDesc.setText(slider_desc[position]);
