@@ -97,7 +97,7 @@
             android:ems="10"
 
             android:hint="Email"
-            android:inputType="textPersonName" />
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/edit_pass"
@@ -123,7 +123,7 @@
             android:text="Log In" />
 
         <TextView
-            android:id="@+id/esqueceu_senha"
+            android:id="@+id/txt_cadastrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="60dp"
